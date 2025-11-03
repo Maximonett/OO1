@@ -25,28 +25,30 @@ public class JobSchedulerTest {
     }
 
     private JobScheduler newFifoScheduler() {
-        JobScheduler fifoScheduler = new JobScheduler();
-        fifoScheduler.setStrategy("FIFO");
-        return fifoScheduler;
+        JobScheduler s = new JobScheduler();
+        s.setStrategy(new Fifo());
+        return s;
     }
 
     private JobScheduler newLifoScheduler() {
-        JobScheduler lifoScheduler = new JobScheduler();
-        lifoScheduler.setStrategy("LIFO");
-        return lifoScheduler;
+        JobScheduler s = new JobScheduler();
+        s.setStrategy(new Lifo());
+        return s;
     }
 
     private JobScheduler newPriorityScheduler() {
-        JobScheduler priorityScheduler = new JobScheduler();
-        priorityScheduler.setStrategy("HighestPriority");
-        return priorityScheduler;
+        JobScheduler s = new JobScheduler();
+        s.setStrategy(new HighestPriority());
+        return s;
     }
 
     private JobScheduler newEffortScheduler() {
-        JobScheduler effortScheduler = new JobScheduler();
-        effortScheduler.setStrategy("MostEffort");
-        return effortScheduler;
+        JobScheduler s = new JobScheduler();
+        s.setStrategy(new MostEffort());
+        return s;
     }
+
+    
 
     private void scheduleJobsIn(JobScheduler aJobScheduler) {
         aJobScheduler.schedule(firstJob);
