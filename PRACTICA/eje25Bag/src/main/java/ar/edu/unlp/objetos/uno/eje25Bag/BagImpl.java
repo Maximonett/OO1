@@ -64,7 +64,7 @@ public class BagImpl<T> extends AbstractCollection<T> implements Bag<T> {
         this.elements.clear();
     }
     
-    
+    //buscar elementos con recurrencias 
     public List<T> getElementsWithOcurrences(int n){
     	List<T> results=new ArrayList<>();
     	
