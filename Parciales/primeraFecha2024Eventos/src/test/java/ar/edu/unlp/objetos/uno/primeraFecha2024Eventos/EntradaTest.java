@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.*;
 
-import org.junit.jupiter.api.BeforeEach;
-
 public class EntradaTest {
 	private Entrada entrada1;
 	private Entrada entrada2;
