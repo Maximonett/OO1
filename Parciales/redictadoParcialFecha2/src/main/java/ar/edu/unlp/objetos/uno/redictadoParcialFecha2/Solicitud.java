@@ -12,11 +12,15 @@ public class Solicitud {
 	private List<Trabajo> trabajos;
 	
 	
-	public Solicitud(Usuario unUsuario,LocalDateTime fechaYHora) {
+	public Solicitud(Usuario usuario,LocalDateTime fechaYHora) {
 		this.usuario=usuario;
 		this.fechaYHora=fechaYHora;
 		this.estado="Pendiente";
 		this.trabajos=new ArrayList<>();
+	}
+	
+	public String getEstado() {
+		return this.estado;
 	}
 	
 	public void setEstado(String unEstado) {
@@ -34,11 +38,12 @@ public class Solicitud {
 				.sum();
 	}
 	
-	public void confirmarSolicitudDeImpresion() {
+	public String confirmarSolicitudDeImpresion() {
 		
 		this.usuario.descontarCredito(this.montoAPagarPorSolicitud());
 		this.setEstado("Confirmado");
 		
+		return this.getEstado();
 		
 	}
 	
