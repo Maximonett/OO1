@@ -20,7 +20,7 @@ public class Plataforma {
      * precio base del plan + penalización + costo por actividad.
      */
     public double montoTotalACobrar(Cliente cliente, LocalDate fechaInicial, LocalDate fechaFinal) {
-        double precioBase = cliente.getPlan().precioBase(fechaInicial, fechaFinal);
+        double precioBase = cliente.getPlan().precioBase();
         double penalizacion = cliente.getPlan().montoDePenalizacion(cliente, fechaInicial, fechaFinal);
         double costoActividad = cliente.getPlan().montoPorActividad(cliente,fechaInicial,fechaFinal);
         

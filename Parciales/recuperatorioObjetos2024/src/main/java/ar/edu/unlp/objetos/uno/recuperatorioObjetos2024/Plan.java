@@ -6,7 +6,7 @@ public interface Plan {
     /**
      * Retorna el precio base del plan entre las fechas dadas.
      */
-    public double precioBase(LocalDate fechaInicial, LocalDate fechaFinal);
+    public double precioBase();
     
     /**
      * Retorna el monto de penalización correspondiente a un cliente

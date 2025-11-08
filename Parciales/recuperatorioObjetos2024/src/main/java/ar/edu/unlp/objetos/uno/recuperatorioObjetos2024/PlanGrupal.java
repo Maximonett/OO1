@@ -16,7 +16,7 @@ public class PlanGrupal implements Plan {
      * Precio base: $800 por cada IP contratada.
      */
     @Override
-    public double precioBase(LocalDate fechaInicial, LocalDate fechaFinal) {
+    public double precioBase() {
         return this.cantidadDeIpLimite * 800;
     }
 

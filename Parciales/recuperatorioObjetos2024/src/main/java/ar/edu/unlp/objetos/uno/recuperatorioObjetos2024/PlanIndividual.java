@@ -18,7 +18,7 @@ public class PlanIndividual implements Plan {
      * Precio base: $20 por cada minuto contratado.
      */
     @Override
-    public double precioBase(LocalDate fechaInicial, LocalDate fechaFinal) {
+    public double precioBase() {
         return this.cantidadDeMinutos * 20;
     }
 
