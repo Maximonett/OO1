@@ -19,7 +19,7 @@ public class PlanGrupal implements Plan {
     public double precioBase() {
         return this.cantidadDeIpLimite * 800;
     }
-
+ 
     /**
      * Penalización:
      * Si el cliente tiene más direcciones IP utilizadas que el límite contratado,
